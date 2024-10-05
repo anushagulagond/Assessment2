@@ -8,11 +8,21 @@
 
     public class FishUtility : Fish
     {
+        /// <summary>
+        /// Add method which adds fish species
+        /// </summary>
+        /// <param name="species">string type</param>
+        /// <param name="pricePerFish">double type</param>
         public void Add(string species,double pricePerFish)
         {
             Species = species;
             PricePerFish = pricePerFish;
         }
+
+        /// <summary>
+        /// BuyFish method 
+        /// </summary>
+        /// <returns>boolaen</returns>
         public bool BuyFish()
         {
             if(Species=="Clownfish" || Species == "Goldfish")
@@ -24,6 +34,12 @@
                 return false;
             }
         }
+
+        /// <summary>
+        /// Calculate the total price 
+        /// </summary>
+        /// <param name="numberOfFishes">int type</param>
+        /// <returns>double type</returns>
         public double CalculatePrice(int numberOfFishes)
         {
             double AdditionalCharges=0;

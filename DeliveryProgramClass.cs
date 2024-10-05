@@ -18,6 +18,11 @@ namespace Assessment2
         public string Name { get; set; }
         public int Stock { get; set; }
 
+        /// <summary>
+        /// Parameter Constructor needs 2 parameters
+        /// </summary>
+        /// <param name="name">string type</param>
+        /// <param name="stock">int type</param>
         public Product(string name, int stock)
         {
             Name = name;
@@ -30,6 +35,12 @@ namespace Assessment2
         {
         }
 
+        /// <summary>
+        /// This is PlaceOrder method 
+        /// </summary>
+        /// <param name="product">Pass parameter as Product class object</param>
+        /// <returns>boolean type</returns>
+        /// <exception cref="ProductOutOfStockExcepyion"></exception>
         public bool PlaceOrder(Product product)
         {
             if (Stock > 0)

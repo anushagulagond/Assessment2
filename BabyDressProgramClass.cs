@@ -12,10 +12,20 @@ namespace Assessment2
 {
     public class BabyDressUtility 
     {
+        /// <summary>
+        /// method to add dress to cart
+        /// </summary>
+        /// <param name="dress">Pass BabyDress Object as parameter</param>
         public void AddDressToCart(BabyDress dress)
         {
             BabyDressProgramClass.DressCart.Add(dress);
         }
+
+        /// <summary>
+        /// Remove dress from cart
+        /// </summary>
+        /// <param name="brand">pass Brand as Parameter of type string</param>
+        /// <returns>boolean</returns>
         public bool RemoveDressFromCart(string brand)
         {
             foreach (var DressBrand in BabyDressProgramClass.DressCart)
@@ -30,6 +40,7 @@ namespace Assessment2
             }
         }
     }
+
     public class BabyDressProgramClass
     {
        public static List<BabyDress> DressCart { get; set; } = new List<BabyDress>();
